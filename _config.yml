@@ -3,8 +3,8 @@ title: Codeulate
 email: ben.orenstein@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   Ben Orenstein's blog.
-baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://blog.benorenstein.com" # the base hostname & protocol for your site
+baseurl: "/codeulate/" # the subpath of your site, e.g. /blog/
+url: "http://benorenstein.com" # the base hostname & protocol for your site
 twitter_username: r00k
 github_username:  r00k
 
