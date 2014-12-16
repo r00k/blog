@@ -4,8 +4,14 @@ title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/)
+My name is Ben Orenstein.
 
-You can find the source code for the Jekyll new theme at: [github.com/jglovier/jekyll-new](https://github.com/jglovier/jekyll-new)
+I work at [thoughtbot](http://thoughtbot.com) in Boston, enjoy [speaking at
+conferences](http://www.confreaks.com/presenters/780-ben-orenstein), host a
+plucky little [podcast](http://giantrobots.fm), and co-created
+[Trailmix](http://www.trailmix.life).
 
-You can find the source code for Jekyll at [github.com/jekyll/jekyll](https://github.com/jekyll/jekyll)
+This is [me on github](http://github.com/r00k). I have some
+[dotfiles](http://github.com/r00k/dotfiles) you might like.
+
+You can also [follow me on Twitter](http://twitter.com/r00k).
