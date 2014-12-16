@@ -1,0 +1,43 @@
+---
+layout: post
+title: 'Installing fuzzyfinder_textmate: Textmate''s Cmd+T in Vim'
+date: 2010-02-04 17:37:11.000000000 -05:00
+categories:
+- general
+tags: []
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+  enclosure: |
+    http://s3.amazonaws.com/buckblog/videos/fuzzyfinder_textmate.mov
+    604727
+    video/quicktime
+  dsq_thread_id: '172066550'
+author:
+  login: r00k
+  email: ben.orenstein@gmail.com
+  display_name: Ben Orenstein
+  first_name: ''
+  last_name: ''
+---
+<p>When <a href="http://twitter.com/Jamis">Jamis Buck</a> <a href="http://weblog.jamisbuck.org/2008/10/10/coming-home-to-vim">switched from TextMate to vim</a>, he found he missed one bit of functionality above all others: TextMate's file finder, Cmd+T.</p>
+<p>Being a capable programmer, he "took an evening" and wrote up a Ruby library to replicate this functionality.  Then he extended vim with a plugin called fuzzyfinder_textmate that called out to this Ruby library.</p>
+<p>The results were terrific, and fuzzyfinder_textmate is my go-to solution for opening files in vim.  I almost never type ":e ..." anymore.  I've yet to see anything faster at grabbing a file buried somewhere in a directory tree. This plugin is <em>particularly </em>useful for me when working on Rails projects, where vim's 'current directory' is Rails.root, and everything I want to open is down at least one level.  If you're not familiar with the plugin, here's a <a href="http://s3.amazonaws.com/buckblog/videos/fuzzyfinder_textmate.mov">silent-movie-style screencast</a> Jamis put together when he released it.</p>
+<p>Sadly, this terrific plugin has a bit of a problem: it's a pain in the ass to install.</p>
+<p>Jamis' fuzzyfinder_textmate relies on a second plugin, called fuzzyfinder.vim.  The author of this plugin makes frequent changes, which usually end up breaking fuzzyfinder_textmate.  This got to be too much for Jamis, and he officially <a href="http://weblog.jamisbuck.org/2009/1/28/the-future-of-fuzzyfinder-textmate">dropped the project</a> a year ago.  Today, the latest versions of these plugins won't work together.</p>
+<p>However, thanks to several contributors and github's forking, you can get this big mish-mash of libraries and plugins to work...provided you install exactly the right versions of each.  It's a trifle annoying, but fortunately I've done the homework for you.  Follow the steps below and enjoy my <em>favorite</em> bit of vim functionality.<br />
+<strong><br />
+Installing fuzzyfinder_textmate:</strong></p>
+<ol>
+<li>Make sure you're using vim 7.2 (the latest, as of this writing).  It's possible earlier versions work as well, but I can't confirm these steps will apply.</li>
+<li>Make sure the vim you installed was compiled with ruby support.  Check this by running <em>vim --version | grep ruby</em> at the command line.  A result of <em><strong>+</strong>ruby</em> means you're good, <em><strong>-</strong>ruby</em> means you DON'T have ruby support.  Debian/Ubuntu users can get a ruby-capable vim by running <em>sudo apt-get install vim-ruby</em>.  Another test to make sure you've got ruby support: type <em>:ruby</em> in vim.  <em>Argument required</em> is good.  <em>Not an editor command: ruby</em> is bad.</li>
+<li>Install Jamis' fuzzy_file_finder Ruby library <a href="http://github.com/jamis/fuzzy_file_finder">from here</a>.  This is installable as a gem, but I strongly recommend simply <em>git clone</em>ing this repo, creating a ruby directory in your .vim folder, and placing the lib/fuzzy_file_finder.rb inside there.   This keeps this dependency in your .vim directory (rather than on a system gem you'll forget about when you change servers), and enables keeping your vim configuration in a git repository (HIGHLY recommended).</li>
+<li> Install <a href="http://www.vim.org/scripts/download_script.php?src_id=10718">vim-fuzzyfinder version 2.22.3</a>.  IMPORTANT: you MUST use this exact version.  Other versions (particularly anything NEWER than this one) will NOT work.  After installing, confirm it works by running <em>:FuzzyFinderFile</em> in vim.  You should get a pop up box with a list of files.  If you do you're almost there.</li>
+<li> Install fuzzyfinder_textmate, but use <a href="http://github.com/sethbc/fuzzyfinder_textmate">sethbc's fork from github</a>.  Don't use the version from Jamis' repo as it will NOT work with the version of fuzzyfinder.vim we installed.  <em>git clone </em>again, and simply put fuzzyfinder_textmate.vim in your .vim/plugin folder. To test that everything worked, run <em>:FuzzyFinderTextMate</em> in vim.  If you get a popup box, you're done!</li>
+</ol>
+<p>If you're having trouble, the most common culprit is that you've mucked up the versions.  This collection of files is quite finicky, and if you're using the wrong version of any one things fall apart quickly.  After that, double-check you've got Ruby support.</p>
+<p>If you're still having trouble, do a <em>git clone</em> of <a href="http://github.com/r00k/dotfiles">my dotfiles</a>.  My setup is confirmed working, so you can diff your copies of the library/plugins against mine.  Any differences mean you've got the wrong version.</p>
+<p>If you still have issues, leave a note in the comments and I'll try to get you sorted out.</p>
+<p>Finally, if you found this post useful, I'd urge you to check out my screencast: <a href="http://www.codeulatescreencasts.com/products/vim-for-rails-developers">Vim for Rails Developers</a>.  In it, I'll teach you the best plugins, external tools, and editing tricks for writing Rails code at top-speed.  If you write Rails code in vim, it's sure to save you time.</p>

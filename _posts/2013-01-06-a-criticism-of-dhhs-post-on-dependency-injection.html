@@ -1,0 +1,30 @@
+---
+layout: post
+title: A criticism of DHH's post on Dependency Injection
+date: 2013-01-06 11:40:59.000000000 -05:00
+categories:
+- ruby
+tags: []
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+  dsq_thread_id: '1011415706'
+author:
+  login: r00k
+  email: ben.orenstein@gmail.com
+  display_name: Ben Orenstein
+  first_name: ''
+  last_name: ''
+---
+<p><a href="http://david.heinemeierhansson.com/2012/dependency-injection-is-not-a-virtue.html">DHH's latest post on DI</a> is bad writing and thinking, and I'm concerned about its effects on the Ruby community.</p>
+<p>Through much trial and error, I've learned that every programming concept has advantages and disadvantages; nothing is purely good or bad. Global data can be good. Reducing duplication can add the cost indirection. To present anything as purely one or the other tends to be the realm of novices who haven't yet grasped the subtleties involved. Worthwhile discussion of programming ideas takes a fairly neutral view, and focuses on tradeoffs.</p>
+<p>The problem with David's post is that it does the opposite. Here's his coverage of the benefits of dependency injection:</p>
+<blockquote><p>"As has unfortunately happened with a variety of patterns that originate from rigid languages like Java, Dependency Injection has spread and been advocated as a cross-language best practice on trumped up benefits of flexibility and malleability. If your code never knows exactly who it's talking to, it can talk to anyone! Testing stubs, mocks, and future collaborators. Hogwash."</p></blockquote>
+<p>This is not analysis, it's wholesale dismissal of the points that don't match his opinion. This would get you a D in a freshman analytical writing class.</p>
+<p>Later:</p>
+<blockquote><p>"Of course, this runs counter to another Java-derived principle to only mock types you own. Combine that with an affinity of dependency injection and the simplest thing that could possibly work is no longer not just good enough, it's disgusting. It violates the doctrine that has been so carefully assembled."</p></blockquote>
+<p>Ah, the ol' switcheroo. The OTHER side has been indoctrinated and refuses to examine the tradeoffs it's making. Unlike us, the enlightened, who know that the other guys are wrong, and need not discuss their arguments.</p>
+<p>There's plenty of bad writing on the internet, and I don't usually consider it worth the time to call it out. But David is a tremendously influential character in the Ruby world, and I'm concerned that this dysfunctional approach to discussion will prove contagious. It's particularly dangerous for newcomers, for whom a rule they can always follow seems like a life raft in a sea of uncertainty. Sadly, it will do them more harm than good.</p>
+<p>I hope David continues to share his thoughts about Ruby. When an experienced and successful programmer speaks, I'll always listen. But I'd love to see this faulty means of discussion deprecated, extracted to a gem, and then removed entirely.</p>

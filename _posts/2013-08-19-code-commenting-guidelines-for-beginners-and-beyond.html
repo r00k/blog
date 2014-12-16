@@ -1,0 +1,35 @@
+---
+layout: post
+title: Code Commenting Guidelines for Beginners and Beyond
+date: 2013-08-19 21:12:05.000000000 -04:00
+categories:
+- general
+tags: []
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+  dsq_thread_id: '1619334047'
+author:
+  login: r00k
+  email: ben.orenstein@gmail.com
+  display_name: Ben Orenstein
+  first_name: ''
+  last_name: ''
+---
+<p>When I'm talking to beginning programmers about code comments, I give them a simple rule: <strong>don't use them</strong>. Instead, rework your code until a comment would be superfluous. Great method names abolish the need for 99% of the comments that beginning programmers create.</p>
+<p>I'm a firm believer in the value of simple rules for beginners. They ignore subtleties but help the newbie do the right thing the majority of the time.</p>
+<p>For the experienced programmer, condemning all comments is too simplistic. Occasionally, writing a comment is the best choice. </p>
+<h2>When I use comments</h2>
+<p><strong>When I have to do something really weird.</strong></p>
+<p>If a library has a bizarre bug that requires a workaround, I will leave an explanatory comment as close to my hack as possible. There are many similar scenarios, but their common thread is they will likely surprise a project's future maintainers. </p>
+<p><strong>As class-level documentation.</strong></p>
+<p>I very much like documenting classes with a short, high-level description of their purpose. This is almost always a single line just above the class declaration. If the description is both short and high-level, it is unlikely to get out of sync with the code (a comment's greatest sin).</p>
+<p><strong>As TODOs in my own branches. </strong></p>
+<p>I will sometimes insert a TODO comment in my local branch. These notes are for things I want to do before submitting my code for review. A reviewer will never see them, and I never merge them into shared branches.</p>
+<h2>Other half-formed thoughts on comments</h2>
+<p>When I am forced to leave a comment, I use proper capitalization and punctuation. If I have to bring another comment into the world it might as well look nice.</p>
+<p>One idea I've been toying with is writing method-level documentation comments. These comments precede a method and document its parameters, side effects (boo), and return value. It also often includes examples. </p>
+<p>When I'm writing Rails applications, I never document my methods this way. However, when I used to write Common Lisp, I got a lot of value out of creating short docstrings for every function. Additionally, I very much prefer using libraries with good method-level documentation (usually this translates directly to "Not much prose, but tons of examples").</p>
+<p>Given that method-level comments are so helpful in these circumstances, I wonder if my code would be better if I included them. I think it's worth an experiment at the very least. If you've had lots of experience writing and reading method-level comments, please chime in on the...ahem...comments.</p>

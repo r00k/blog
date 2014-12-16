@@ -1,0 +1,45 @@
+---
+layout: post
+title: Why Reddit is broken, and how to fix it
+date: 2007-12-12 11:36:37.000000000 -05:00
+categories:
+- general
+tags:
+- reddit
+- social bookmarking
+- wisdom of the crowd
+status: publish
+type: post
+published: true
+meta:
+  dsq_thread_id: '172065952'
+author:
+  login: r00k
+  email: ben.orenstein@gmail.com
+  display_name: Ben Orenstein
+  first_name: ''
+  last_name: ''
+---
+<p>Inflammatory titles aside, I think <a href="http://www.reddit.com">reddit</a> is a fantastic site.  I read it constantly.</p>
+<p>The interface is beautifully clean, just simple text arranged neatly on a white-linen background.  On top of that, they were <a href="http://reddit.com/help/team_reddit">founded by hackers</a>, and funded by <a href="http://www.paulgraham.com">another hacker</a> (and my personal hero).  These factors alone give them a lot of potential.</p>
+<p>But lately, something important has changed, and reddit is adapting slowly.  Not only that, some of its adaptations are quite literally broken.  As the reddit audience has grown, the type of content submitted to the site has changed.  It turns out that the "<a href="http://en.wikipedia.org/wiki/Wisdom_of_the_crowd">wisdom of the crowd</a>" idea on which social bookmarking sites are predicated can get tricky as your crowd gets more diverse.</p>
+<p>Early on, reddit articles were exactly my style: the cream of the crop, content-wise, and usually technically oriented.  The titles summarized the content well, and the signal-to-noise ratio was impressive.  I suspect these strengths were related to reddit's status as a well-trafficked site written in <a href="http://gigamonkeys.com/book/">Lisp</a>--something which catches the attention from the <a href="http://www.paulgraham.com/gh.html">hacker-types</a>.  My kind of people.</p>
+<p>Reddit's success has brought with it a more mainstream audience.  With that audience, the focus of the site has changed.  These days it's hard to tell what that focus is.  Maybe it's politics: at the time of writing, eleven of the twenty-five front page links are politically oriented.  Maybe it's funny pictures (six links).  Maybe it's a fansite for a certain <a href="http://www.xkcd.com">unpronounceable webcomic</a>.</p>
+<p>Anyhow, it doesn't particularly matter what reddit's focus is.  What matters is that it's changing.  Depending on who you are and what you like, this may be a good thing.  You might love the new reddit.  But plenty of people do not.  This is a very common phenomenon:</p>
+<ol>
+<li>A site is created.</li>
+<li>First generation users fall in love.</li>
+<li>Word spreads, and the site is rapidly overwhelmed with new users.</li>
+<li>Early users grow to <em>hate</em> the new users who have <em>no</em> idea how things are done around here and now everything is <a href="http://reddit.com/info/61ds1/comments/">RUINED!</a></li>
+</ol>
+<p>It's like a stampede of younger siblings.</p>
+<p>So now we've got this huge swarm of users, and everyone wants things their way.  Oh well, some people are going to lose interest and leave, but that's inevitable because you can't please everyone.  The links are chosen by the majority and if you're not the majority anymore, tough.</p>
+<p>
+It doesn't have to be like this.  There is, in fact, a way to please everyone: <strong>show every user only the links he wants to see.</strong></p>
+<p>Now, this is a fairly complex problem, and reddit's first solution is <a href="http://en.wikiquote.org/wiki/H._L._Mencken">neat, plausible, and wrong</a>: subreddits.  Subreddits are wrong because people have diverse interests.  The programming subreddit has some gems on unit testing and <a href="http://ruby-lang.org">Ruby</a>, but I'm not particularly interested in "Sexprs in Leopard," which sounds like it should be on the nsfw subreddit anyway.  Also, there <em>are</em> a few political topics I'd like to see, and maybe even some stuff from entertainment or sports.</p>
+<p>Now stand back, because I'm going to use an analogy here: links on reddit are like different kinds of food.  Everyone has different preferences when it comes to food, and delicious to me might be gag-reflex for you.  How do we show people only food they like?  Reddit's current approach is like dividing options into three boxes: breakfast, lunch, and dinner.  Clearly this doesn't work.  There's not enough granularity--just because I don't like cereal doesn't mean I don't like omelettes. Okay, let's split breakfast into two more boxes: cold and hot.  Still not good enough.  Omelettes are tasty but a fondness for grits is indefensible.  The problem here is that classifying at this level will always be too general to give good recommendations.  We're approaching this problem with a top-down mindset, and we're not getting good results.  So what should we do instead?  How about <a href="http://www.paulgraham.com/progbot.html">bottom-up?</a></p>
+<p>What if we analyzed ingredients instead?  I don't like this dip, or this chicken dish.  Cold appetizer, hot entree, no commonality with the top-down approach.  But if we check the ingredients, they both have cilantro.  Hmmm.  Might be good to recommend fewer dishes with cilantro, and let's keep a watch for more dishes I dislike.  If further dishes have that ingredient, it's awfully likely I don't care for that particular spice.  However, someone else might <em>love</em> cilantro, so let's watch to see if that's listed in lots of the dishes they <em>do</em> like, and be more likely to recommend pro-cilantro recipes for them.</p>
+<p>This approach is likely looking very familiar to many of you.  It's the basis of something called <a href="http://en.wikipedia.org/wiki/Bayesian_spam_filtering">bayesian filtering</a>.  Bayesian filtering is the closest we've come to solving the problem of identifying spam.  It works because it creates lists of words that make something likely to be spam <em>for you</em>.  "Viagra" might be an immediate red flag for you, but for me it's a necess--never mind.</p>
+<p>So back to reddit.  Let's ditch the subreddits.  Instead, why not implement bayesian filtering to recommend links to the users?  Build the word lists from the content of the sites linked to, and maybe the submitted titles too.  When I click a link, add its key words to the list of things I like.  When I downvote, file them right there under cilantro.  And why stop there?  Why not also notice when things I like are similar to things another user likes?  Then recommend stuff HE likes to me!  It's like wisdom of the crowd TIMES bayesian filtering.  We can call it Web 3.0!</p>
+<p>Okay, this idea is not so new, and not so clever.  In fact, I'm surprised this hasn't already been implemented.  After all, <a href="http://www.ycombinator.com">reddit-funder Paul Graham</a> was the guy who thought up using bayesian filtering for spam.  Reddit even already has a "Recommended" link which claims it learns based on your voting, but this is a horrible, horrible lie.  I have voted down dozens of Ron Paul articles (not from dislike, he just doesn't particularly interest me) and the recommendations page I just refreshed has six articles with "ron paul" in their titles.</p>
+<p>So I appeal to you, reddit-guys, let's flip the whole approach and come at this bottom-up.  Don't segregate your audience into huge buckets, create a customized reddit for each and every one of us.  Bring those of us with common interests together.  Show us things we didn't even know we liked yet!  While you do that, I'm gonna go shut my office door and check out "sexprs in leopard."</p>

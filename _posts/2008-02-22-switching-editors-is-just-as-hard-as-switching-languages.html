@@ -1,0 +1,35 @@
+---
+layout: post
+title: Switching editors is just as hard as switching languages
+date: 2008-02-22 09:49:44.000000000 -05:00
+categories:
+- lisp
+- programming tools
+tags: []
+status: publish
+type: post
+published: true
+meta:
+  dsq_thread_id: '172066400'
+author:
+  login: r00k
+  email: ben.orenstein@gmail.com
+  display_name: Ben Orenstein
+  first_name: ''
+  last_name: ''
+---
+<p>I'd been a <a href="http://www.vim.org/">vim</a> user for about a year when I started learning <a href="http://en.wikipedia.org/wiki/Lisp_programming_language">lisp</a>.  In the free lisp IDE world, there's pretty much only one player, and that's <a href="http://www.gnu.org/software/emacs/">emacs</a> (with <a href="http://common-lisp.net/project/slime/">SLIME</a>).  Writing lisp in vim can certainly <a href="http://cybertiggyr.com/gene/15-vim/">be</a> <a href="http://groups.google.com/group/comp.lang.lisp/msg/6e91e20f2f371b52">done</a>, but it doesn't compare to the integration available in emacs.  Lisping in vim is destined to be a bit of a hack job, so I resigned myself to learning emacs.</p>
+<p><strong>I could not have anticipated how hard this would be.</strong></p>
+<p>The reason this was so difficult was because of how powerful and customizable both vim and emacs are.  Switching from notepad to wordpad presents no difficulty at all: there are only a handful of shortcuts available, and it's practically impossible to customize these programs.</p>
+<p>The file that holds vim's customizations is called a vimrc.  This is analogous to emacs' .emacs file.  My vimrc is over 300 lines long.  Have you ever been in a luxury car that stores profiles for each driver?  When you get in the car, you press the appropriate button and the seat, steering wheel, and mirrors adjust to your favorite settings.  Vimrc and .emacs files provide the same thing, only you can go ahead and move the steering wheel to the passenger side, reverse the gas and brake pedals and put ten new gauges on your dash (and change the color scheme while you're at it).</p>
+<p>Going from vim to emacs wasn't just going from editor to editor.  I was leaving behind a tool that I'd perfectly tailored to make me as efficient as possible.  In vim, I was a text surgeon.  Certain commands and techniques were so hardwired in my brain that I couldn't tell you what keys I'd pressed to use them--they were at the level of muscle memory.  I had clawed my way up the learning curve and I was fast.  I was deadly.</p>
+<p>I was leet.</p>
+<p>Using emacs, I was suddenly booted back down that learning curve.  Now I had to refer to a cheat sheet to remember how to SAVE.  Every five minutes I was googling "emacs cut paste," or "emacs new buffer."  Ugh.  I was a noob, and I missed vim.</p>
+<p>I'd like to tell you I was mature about this.  That I realized I was just facing a steep learning curve and I'd eventually reach the same level of competency I enjoyed in my old editor.  Instead, I got my vim friends together and bitched about emacs.  I whined about the key chords, and mocked the features that were shortsightedly omitted (read: I couldn't find them yet).  I even considered writing a post here blasting what I saw as emacs' shortfalls.</p>
+<p>The problem, of course, wasn't emacs, but me.  When you are able to program as efficiently as vim will let you, trying emacs for the first time will leave you feeling slow and disoriented.  It's extremely unpleasant, and it's human nature to blame this discomfort on the editor, rather than your own ignorance.</p>
+<p>I'll be honest: the experience was so demoralizing I gave up, twice.  <strong>The need to learn emacs very nearly prevented me from learning lisp.</strong>  And if lisp hadn't been such an excellent and promising language, I probably would have given up permanently.</p>
+<p>What finally turned me around was forcing myself to learn.  I got a hard copy of the emacs manual, and I started hanging out in the #emacs on freenode.  I read <a href="http://steve.yegge.googlepages.com/effective-emacs">Effective Emacs</a> and incorporated several of Yegge's ideas.  Perhaps most importantly, I started growing my .emacs file.</p>
+<p>Today, I'm still not quite as comfortable in emacs as vim, but it's close.  And when it comes to the task I'm doing most often (slinging around s-expressions), I'm getting pretty quick.  The experience has been a bear, but the insights it's given me have been worth it.</p>
+<p>There is a well-known holy war between vim and emacs users.  Both sides are, of course, convinced their editor is best.  I now know why this debate is so fierce: <strong>the faster you are with your editor, the more you will hate any other editor you try</strong>.  In the beginning, I couldn't believe how much I hated emacs.  If I'd given up and quit, I think I'd be right there in those flame wars, bashing the abomination that is emacs and extolling the virtues of vim.  I think this is where the most passionate critics in this war come from--they've tried the other guy for a day or two, and it was awful, basically because it was so damn unfamiliar.</p>
+<p>Changing my editor has been just as hard as learning lisp has been, if not harder.  Some nights I'll spend twenty minutes writing lisp, and two hours customizing emacs.  But this is natural.  Lisp is a powerful tool because it lets you <a href="http://www.paulgraham.com/progbot.html">grow the language up to your program</a>.  <strong>Effective programming requires growing your editor up to your tasks</strong>.  Every day I make emacs a bit better for the type of work <em>I</em> am doing.</p>
+<p>Before I wrap up, I'd like to point out that if the title of this post sounds suspect to you, consider it a huge red flag.  If the thought of switching editors doesn't fill you with quite a bit of dread, what you're using now is almost certainly underpowered, and you definitely haven't customized it enough.  If this is you, take a look at one of the editors I've been discussing here, and take the time to learn it--I promise it's worth the trouble.  Just, uh...choose carefully.</p>

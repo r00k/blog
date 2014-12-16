@@ -1,0 +1,36 @@
+---
+layout: post
+title: How Unit Testing Could Have Saved Lives
+date: 2009-01-16 12:35:07.000000000 -05:00
+categories:
+- coding
+tags: []
+status: publish
+type: post
+published: true
+meta:
+  dsq_thread_id: '172066481'
+author:
+  login: r00k
+  email: ben.orenstein@gmail.com
+  display_name: Ben Orenstein
+  first_name: ''
+  last_name: ''
+---
+<p>A recent article in <a href="http://www.independent.co.uk/life-style/health-and-wellbeing/health-news/right-patient-right-limb-two-questions-that-have-almost-halved-death-rate-at-one-hospital-1366705.html">The Independent</a> describes a <a href="http://content.nejm.org/cgi/content/full/NEJMsa0810119">fascinating study</a>.  Researchers found that forcing surgeons in a London hospital to implement a single new procedure caused <strong>the death rate after surgery to fall 47 percent</strong>.  Complications likewise fell by 36 percent.</p>
+<p>These are enormous numbers:</p>
+<blockquote><p>Donald Berwick, the president of the US Institute for Healthcare Improvement, said of the innovation: "I cannot recall a clinical care innovation in the past 30 years that has shown results of [this] magnitude."</p></blockquote>
+<p>The change?  <strong>The surgeons were required to run through a simple checklist before and after every procedure.</strong></p>
+<p>Now, <a href="http://www.who.int/patientsafety/safesurgery/tools_resources/SSSL_Checklist_finalJun08.pdf">this checklist</a> [pdf] is not lengthy.  In fact, it's less than twenty questions.  Even more strikingly, <strong>the questions are not complicated</strong>: before administering anesthesia, has the patient confirmed his identity?  Does the patient have any known allergies?  Have we confirmed that this is the <em>right</em> foot?  I'd wager that the most common reaction of people seeing this checklist is "you mean these things weren't being asked <em>already</em>?"</p>
+<p>The thing is, these questions <em>were</em> already being asked.  The difference is that<strong> they weren't being asked in systematic way</strong>.  Members of a surgical team assume that these obvious things have been checked <em>because</em> they're so obvious.  "Of <em>course</em> this is the right patient."  "Of <em>course </em>we asked if he's allergic to the anesthetic."  "Of <em>course</em> we marked the right limb for amputation."</p>
+<p>The problem is, these things are sometimes done incorrectly, or missed entirely.  Not often, not usually; just sometimes.  Forcing doctors and nurses to use the checklist caught these "sometimes" problems, and dramatically improved patient safety in the process.</p>
+<p>From this study, we can draw the following conclusions:</p>
+<ol>
+<li>Even obvious errors are easy to commit, and once committed, can have terrible consequences.</li>
+<li>Those who overlook these problems can be highly-trained and intelligent people.  It appears that you cannot out-train or out-brain our human tendency to err from time to time.</li>
+<li>Instituting a rigorous system to check for errors lowers their occurrence dramatically, compared to existing processes that check for them informally.</li>
+</ol>
+<p>Laid out this way, these statements are probably starting to look familiar, because <strong>they are exactly like the arguments for using unit tests in programming</strong>.  As a software developer, I look at this list and think <em>we knew this stuff already</em>!  We knew it, and we came up with a way of mitigating the problems caused by our own flawed humanity.</p>
+<p><strong>The errors that this checklist catches are the kind that kill people</strong>.  Thousands of people, every year.  If we, as an industry, had somehow conveyed the efficacy of systemic testing with the medical field, this checklist might have been implemented sooner, and lives could have been saved.</p>
+<p>The fact that ideas like this don't flow across fields is not surprising.  Industry-specific myopia reflects our human tendency to form into groups and <a href="http://query.nytimes.com/gst/fullpage.html?res=9C05E6D8113BF933A15757C0A9629C8B63&amp;sec=health&amp;spon=&amp;pagewanted=print">distrust outsiders</a>.  Despite this, I do believe it's worth struggling against.  Perhaps the field of architecture could provide useful insights into the construction of software (<a href="http://www.codinghorror.com/blog/archives/001003.html">perhaps it already has</a>).  Maybe the next big idea in architecture will be inpsired <a href="http://blog.futurelab.net/2007/08/chemistry_as_architecture.html">by chemistry</a>, or <a href="http://zeta.math.utsa.edu/~yxk833/pinker.html">biology</a>.  Maybe the next time I open my editor I should think "<a href="http://en.wikipedia.org/wiki/Primum_non_nocere">first, do no harm</a>."</p>
+<p>It certainly couldn't hurt.</p>

@@ -1,0 +1,32 @@
+---
+layout: post
+title: 'Installing fuzzyfinder_textmate: Textmate''s Cmd+T in Vim'
+date: 2010-02-04 17:39:55.000000000 -05:00
+categories: []
+tags: []
+status: draft
+type: post
+published: false
+meta:
+  _edit_last: '1'
+author:
+  login: r00k
+  email: ben.orenstein@gmail.com
+  display_name: Ben Orenstein
+  first_name: ''
+  last_name: ''
+---
+<p>When Jamis Buck switched back from TextMate to vim, he found he missed one thing above all others: TextMate's file finder: Cmd+T.</p>
+<p>Being a capable programmer, he "<a href="http://weblog.jamisbuck.org/2008/10/10/coming-home-to-vim">took an evening</a>" and wrote up a Ruby library to replicate this functionality.  Then he extended vim with a plugin called fuzzyfinder_textmate that called out to this Ruby library.</p>
+<p>The results were terrific, and fuzzyfinder_textmate is my go-to solution for finding files in vim.  I've yet to see anything faster at grabbing a file buried somewhere in a directory tree.  In fact, I virtually never type ":e ..." anymore.  This plugin is particularly useful for me when working on Rails projects, where vim's 'current directory' is Rails.root, and everything I want to open is down at least one level.</p>
+<p>Sadly, this terrific plugin has an unsightly blemish: it's a pain in the ass to get working.</p>
+<p>Here's why: Jamis' fuzzyfinder_textmate relies on a second plugin, called fuzzyfinder.vim.  The author of this plugin makes frequent changes, which usually end up breaking fuzzyfinder_textmate.  This was the reason Jamis cited (link xxx) for dropping support for it.  To get this all to work, you've got to use the right version of each plugin, or fuzzyfinder_textmate won't work.  Fortunately, I've done the homework for you.</p>
+<p>Installing fuzzyfinder_textmate:</p>
+<p>1.  Make sure you're using vim 7.2 (the latest, as of this writing).  It's possible earlier versions work as well, but I can't confirm these steps work on those.</p>
+<p>2.  Make sure the vim you installed was compiled with ruby support.  Check this by running 'vim --version | grep ruby' at the command line.  A result of "+ruby" means you're good, "-ruby" means you DON'T have ruby support.  Debian/Ubuntu users can get a ruby-capable vim by running 'sudo apt-get install vim-ruby'.  Another test to make sure you've got ruby support: type ":ruby" in vim.  "Argument required" is good.  "Not an editor command: ruby" is bad.</p>
+<p>3.  Install jamis' fuzzy_finder ruby library from here: XXX.  This is installable as a gem, but I strongly recommend simply creating a ruby directory in your .vim directory and placing the lib/fuzzy_file_finder.rb inside there.   This keeps the dependency in your .vim directory (rather than on a system gem you'll forget about when you change servers), and enables keeping your vim configuration in a git repository (HIGHLY recommended).</p>
+<p>4.  Install vim-fuzzyfinder version 2.22.3 from http://www.vim.org/scripts/script.php?script_id=1984.  IMPORTANT: you MUST use this version.  Other versions (particularly anything NEWER than this version) will NOT work.  After installing, confirm it works by typing ':FuzzyFinderFile' in vim.  You should get a popup box with a list of files.  You're almost there: now you just need to add Jamis' enhancements to this plugin.</p>
+<p>5.  Install jamis' fuzzy_finder_textmate plugin, but use sethbc's fork from github: http://github.com/sethbc/fuzzyfinder_textmate.  Don't use jamis' version as it will NOT work with the version of fuzzyfinder.vim you installed.  Put fuzzyfinder_textmate.vim in your .vim/plugin folder. To test that everything worked: type :FuzzyFinderTextMate in vim.  If you get a popup box, you're done!</p>
+<p>If you're having trouble, the most common culprit is that you've mucked up the versions.  This collection of files is quite finnicky, and if you're using the wrong version of any one things fall apart quickly.</p>
+<p>If you have any issues, leave a note in the comments and I'll try to help you out.</p>
+<p>Also, if you found this post useful, you might enjoy my screencast: Vim for Rails Developers.  It details my favorite plugins, tips and workflows for writing Rails code in vim.</p>

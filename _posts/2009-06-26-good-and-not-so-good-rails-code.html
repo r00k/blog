@@ -1,0 +1,123 @@
+---
+layout: post
+title: Good and Not So Good Rails Code
+date: 2009-06-26 08:02:19.000000000 -04:00
+categories:
+- general
+tags:
+- rails
+- ruby
+status: publish
+type: post
+published: true
+meta:
+  dsq_thread_id: '172066510'
+author:
+  login: r00k
+  email: ben.orenstein@gmail.com
+  display_name: Ben Orenstein
+  first_name: ''
+  last_name: ''
+---
+<p>I've found I learn best by example.  If you do too, these examples of good and not so good Rails code might be useful.</p>
+<p>This post is targeted at newer Rails programmers.  If you've moved beyond the beginner stages you might not find much here for you.</p>
+<p>Onward!</p>
+<p>Let's start with some code that's not so good.</p>
+<hr /><strong>Not so good:</strong></p>
+<pre lang="ruby">
+# app/controllers/book_controller.rb
+def new
+  @book = Book.find(params[:id])
+  ...
+end
+
+def create
+  @book = Book.find(params[:id])
+  ...
+end
+
+def edit
+  @book = Book.find(params[:id])
+  ...
+end</pre>
+<p><strong>Why it's not so good:</strong></p>
+<p>This controller contains repeated code.  ALWAYS BE WARY OF THIS!  Pay particular attention when you're doing the <em>exact</em> same thing in multiple places.  This type of code should almost always be refactored. In Rails, this duplication can be removed using a <a href="http://api.rubyonrails.org/classes/ActionController/Filters/ClassMethods.html#M000548">before_filter</a>.</p>
+<p><strong>Better code:</strong></p>
+<pre lang="ruby">
+# app/controllers/books_controller.rb
+before_filter :find_book
+
+def new
+  ...
+end
+
+def create
+  ...
+end
+
+def edit
+  ...
+end
+
+protected
+
+def find_book
+  @book = Book.find(params[:id])
+end</pre>
+<p><strong>Why it's better:</strong></p>
+<p>The repeated code has been pulled out into a method (find_book).  Now, changes to the way we find books will be easy to make in this controller.  Notice also that we made it protected.  We only need to use this method in this controller, and a gentleman's objects share as little as possible.</p>
+<hr /><strong>Not so good code:</strong></p>
+<pre lang="ruby">
+# Return an array of titles
+
+def all_titles(books)
+  book_titles = []
+
+  books.each do |book|
+    book_titles << book.name
+  end
+
+  book_titles
+end</pre>
+<p><strong>Why it's not so good:</strong></p>
+<p>Local variables can make complicated code more clear, but the variable in this method isn't pulling its weight.  It's just a box around the stuff we're really interested in.</p>
+<p><strong>Good code:</strong></p>
+<pre lang="ruby">
+# Return an array of titles
+
+def all_titles(books)
+  books.inject([]) { |book_titles, book| book_titles << book.name }
+end</pre>
+<p><strong>Why it's better:</strong></p>
+<p>It is a single, clear line, where each token pulls its weight.  Experienced Ruby users will find this version clearer, despite its greater density.</p>
+<p>It is possible you find this version less clear.  A few months ago, I would have felt the same.  Back then, inject felt a little scary: I'd only bumped into it other peoples' code, and never written a fresh one myself.  However, after a bit of experience, I find it the perfect tool in the certain situations.  Think of using it particularly when you want to build up a collection (like an Array or Hash) from some other collection.</p>
+<p>If you'd like to improve your skills with inject:<br />
+1.  Check out <a href="http://blog.jayfields.com/2008/03/ruby-inject.html">Jay Field's inject post</a> (good)<br />
+2.  Read its <a href="http://www.ruby-doc.org/core/classes/Enumerable.html#M003171">documentation</a> and experiment in <a href="http://en.wikipedia.org/wiki/Interactive_Ruby_Shell">irb</a> (better)</p>
+<p><strong>Update after posting:</strong><br />
+Several commenters have (rightly) pointed out that this code is better written thusly:</p>
+<pre lang="ruby">
+# Return an array of titles
+
+def all_titles(books)
+  books.map(&:name)
+end</pre>
+<p>Quite right guys.  Inject is still great in the right spots though, and it's well worth your time to learn it.</p>
+<hr /><strong>Not so good code:</strong></p>
+<pre lang="ruby">
+# app/views/books/index.html.erb
+
+<% for book in @books %>
+  <%= render :partial => 'shared/book', :locals => { :book => book }
+<% end %></pre>
+<p><strong>Why it's not so good:</strong></p>
+<p>You're calling a partial on a collection of objects, passing each one in through a variable.  This idiom appears in Rails so frequently that a better syntax was created for it.</p>
+<p><strong>Good code:</strong></p>
+<pre lang="ruby">
+# app/views/books/index.html.erb
+
+<%= render :partial => 'book', :collection => @books %></pre>
+<p>Rails will render the partial once per item in @books.  Each item will be available in the variable 'book' (this is the name of the partial, NOT the singularization of your collection's name).</p>
+<p><strong>Why it's good:</strong></p>
+<p>We're being efficient by leveraging functionality that Rails already provides for us. This version makes its intention clearer: "I'm rendering a collection."  The goal of the first version is less obvious, and takes longer to parse.</p>
+<p>Similar to your 'repeated code' alarm, you should have a 'roughly a million programmers must have written these exact lines in the past' alarm.  When that one goes off, check the Rails API and browse some plugins.  Rails is great about providing you efficient ways to perform common tasks.</p>

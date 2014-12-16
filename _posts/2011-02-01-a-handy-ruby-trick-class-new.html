@@ -1,0 +1,63 @@
+---
+layout: post
+title: 'A handy ruby trick: Class.new'
+date: 2011-02-01 21:22:35.000000000 -05:00
+categories:
+- rails
+- ruby
+tags: []
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+  dsq_thread_id: '220693086'
+  _wp_old_slug: ''
+author:
+  login: r00k
+  email: ben.orenstein@gmail.com
+  display_name: Ben Orenstein
+  first_name: ''
+  last_name: ''
+---
+<p>Today I learned that you can pass a block to Class.new, like so:</p>
+<p><code lang="ruby"><br />
+klass = Class.new do<br />
+  def self.speak<br />
+    "hi!"<br />
+  end<br />
+end</p>
+<p>>> klass.speak<br />
+=> "hi!<br />
+</code></p>
+<p>This is a handy for creating one-off classes; the kind you'll throw away quickly. </p>
+<p>It's likely that you'd do this during tests. Here's a test in active_support that uses this technique:</p>
+<p><code lang="ruby"><br />
+class ClassAttributeAccessorTest < Test::Unit::TestCase<br />
+  def setup<br />
+    @class = Class.new do<br />
+      cattr_accessor :foo<br />
+      cattr_accessor :bar,  :instance_writer => false<br />
+      cattr_reader   :shaq, :instance_reader => false<br />
+    end</p>
+<p>    # Now grab an instance of our new class<br />
+    @object = @class.new<br />
+  end</p>
+<p>  # Elided: tests that make sure the cattr_accessor method behaves</p>
+<p>end<br />
+</code></p>
+<p>Another thing I picked up at the same time: you can pass a constant to Class.new and it will set that as the superclass:</p>
+<p><code lang="ruby"><br />
+>> klass = Class.new(String)<br />
+=> #<class:0x105604658><br />
+>> klass.superclass<br />
+=> String<br />
+</class:0x105604658></code></p>
+<p>Here's another test from Rails. This one makes use of both tricks I just showed you:</p>
+<p><code lang="ruby"><br />
+  test "configuration is crystalizeable" do<br />
+    parent = Class.new { include ActiveSupport::Configurable }<br />
+    child  = Class.new(parent)</p>
+<p>    # ...<br />
+  end<br />
+</code></p>

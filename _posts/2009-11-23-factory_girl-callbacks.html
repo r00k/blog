@@ -1,0 +1,36 @@
+---
+layout: post
+title: 'New In factory_girl: Callbacks'
+date: 2009-11-23 16:59:45.000000000 -05:00
+categories:
+- general
+tags: []
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+  dsq_thread_id: '172066546'
+author:
+  login: r00k
+  email: ben.orenstein@gmail.com
+  display_name: Ben Orenstein
+  first_name: ''
+  last_name: ''
+---
+<p><a href="http://www.thoughtbot.com">Thoughtbot</a>'s <a href="http://github.com/thoughtbot/factory_girl">factory_girl</a> has <a href="http://github.com/thoughtbot/factory_girl/commit/6e35bf92071f4b34763e6d0d12ebef8f7eab4d4b">recently gotten</a> a terrific new feature: callbacks.</p>
+<p>They look like this:<br />
+<code lang="ruby">Factory(:user) do |u|<br />
+  u.after_create { |user_instance| do_something_to(user_instance) }<br />
+end</code><br />
+Now, when you use <em>Factory(:user)</em> in your tests, the <em>do_something_to </em>method will be called after the user is saved in the database.  Also notice that you'll be passed the instance of the user as a block parameter.</p>
+<p>There are two other callbacks now available: <em>after_build</em> and <em>after_stub</em>.  These fire pretty much where you'd expect them to. (In practice, I really only use after_create.)</p>
+<p>You can mix and match these callbacks on the same factory.  Multiple definitions of the same callback will be executed in the order you provide them:<br />
+<code lang="ruby">Factory(:user) do |u|<br />
+  u.after_build  { |user_instance| do_something_to(user_instance) }<br />
+  u.after_create { do_this_after_create }<br />
+  u.after_create { then_do_this }<br />
+end</code><br />
+I'm excited about this addition because of how much more flexibility this gives factory_girl.  There are some kludgy parts of my <em>factories.rb</em> files that will be more elegant when refactored with these methods. Accepting these little lambdas to be run later feels very lispy, something I take as a great sign.</p>
+<p>For more usage details, check out the 'callbacks' section of the <a href="http://github.com/thoughtbot/factory_girl/blob/master/README.rdoc">README</a>.</p>
+<p>And, if you'd like to read more about using Ruby's blocks this way, Greg Brown has an <a href="http://blog.rubybestpractices.com/posts/gregory/009-beautiful-blocks.html">excellent article on the topic</a> (excerpted from his <a href="http://www.amazon.com/gp/product/0596523009?ie=UTF8&amp;tag=codeulate-20&amp;linkCode=as2&amp;camp=1789&amp;creative=9325&amp;creativeASIN=0596523009">also-excellent book</a>).</p>

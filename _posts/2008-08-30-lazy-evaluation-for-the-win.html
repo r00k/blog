@@ -1,0 +1,35 @@
+---
+layout: post
+title: Lazy Evaluation For The Win
+date: 2008-08-30 15:18:32.000000000 -04:00
+categories:
+- general
+tags: []
+status: publish
+type: post
+published: true
+meta:
+  dsq_thread_id: '172066452'
+author:
+  login: r00k
+  email: ben.orenstein@gmail.com
+  display_name: Ben Orenstein
+  first_name: ''
+  last_name: ''
+---
+<p>Sometimes being a programmer changes the way I live a little.  What happens is every once in a while I find a programming idea that proves useful in a totally different area of my life.  The best example I can think of this happening is when I discovered <a href="http://en.wikipedia.org/wiki/Lazy_evaluation">lazy evaluation</a>.</p>
+<p>First of all, the best thing about lazy evaluation?  Great marketing!  Lazy evaluation!  Can you imagine a more appealing name given a target market of programmers?  In software, lazy is a moniker you can wear with pride.  I'm talking about <a href="http://blogoscoped.com/archive/2005-08-24-n14.html">the good kind of lazy</a>:</p>
+<blockquote><p>...only lazy programmers will want to write the kind of tools that might replace them in the end. Lazy, because only a lazy programmer will avoid writing monotonous, repetitive code – thus avoiding redundancy, the enemy of software maintenance and flexible refactoring. Mostly, the tools and processes that come out of this endeavor fired by laziness will speed up the production.</p></blockquote>
+<p>Okay, it's got a killer name.  So what is it?</p>
+<p>Imagine an evaluator comes across a line like x = factorial(100);</p>
+<p>Strict evaluation would demand that we call the factorial function right away so we can store that result in x.  This is like that insanely type A girl you knew in high school who absolutely has to get this done before anything else is allowed to happen.</p>
+<p>Lazy evaluation is a bit more sly; more like a clever procrastinator in the back of the classroom.  A lazy evaluator looks at that statement and writes a reminder to itself: "call factorial of 100 if somebody asks about x."  The computation is delayed until x is referenced elsewhere else in the program.  If x ends up never being accessed you've just saved yourself some significant time.</p>
+<p>Lazy evaluation puts off work that might not need to be done and lets you get on with the next step.</p>
+<p>So, is this ever useful in real life?  Yes.  All the time.</p>
+<ul>
+<li>    In software: don't optimize early.  In fact, don't optimize at all if you don't have to.  Remember: real programmers ship.  Ignore stuff you don't need to think about yet and you'll ship sooner.</li>
+<li>In business: are you spending time projecting your third-year revenue or are you on the phone getting customers?  Business plan?  Strict.  Banging out calls?  Lazy.</li>
+<li>In your personal life: have you ever worried about giving someone bad news only to find they got far less upset than you anticipated?  All that dread you felt, and for no reason at all. Simply refusing to worry about something until it has actually occurred is a excellent and healthy habit to get into.</li>
+</ul>
+<p>Lazy evaluation is basically the codification of "let's cross that bridge when we come to it," and that phrase has reached cliche status because it comes up a lot.  Keeping lazy evaluation in mind has had a way of focusing me on my real problems all over the board.  It's trimmed the fat from my to-do list and spared me a lot of wasted mental energy.</p>
+<p>Ftw.</p>

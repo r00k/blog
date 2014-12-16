@@ -1,0 +1,95 @@
+---
+layout: post
+title: How much should global variables cost?
+date: 2013-08-18 22:27:46.000000000 -04:00
+categories:
+- general
+tags: []
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+  _wp_old_slug: a-rate-sheet-for-programming-transgressions
+  dsq_thread_id: '1616700484'
+  dsq_needs_sync: '1'
+author:
+  login: r00k
+  email: ben.orenstein@gmail.com
+  display_name: Ben Orenstein
+  first_name: ''
+  last_name: ''
+---
+<p>Below, please find a proposed set of fees for committing various programming transgressions. </p>
+<p>Note: this is not a list of things you must never do, but an attempt to quantify the relative cost of employing these techniques.</p>
+<p>Payment is due at the time of code review.</p>
+<h3>Style guide violations</h3>
+<h4>Fee: $0.02</h4>
+<p>Consistency in a codebase is a small but worthy goal.</p>
+<h3>Lazy commit message</h3>
+<h4>Fee: $0.50</h4>
+<p>Aim for future grepability. Peruse this <a href="http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html">guide to good commit messages</a>.</p>
+<h3>Use of local variables</h3>
+<h4>Fee: $1.00</h4>
+<p>Most local variables are better off as extracted methods. Note: block parameters are exempt.</p>
+<h3>Methods longer than 1 line</h3>
+<h4>Fee: $1.50</h4>
+<p>Be deeply suspicious of methods longer than one line.</p>
+<h3>Methods longer than 5 lines</h3>
+<h4>Fee: $3.00</h4>
+<p>Methods should do only one thing. One thing should usually take fewer than 5 lines to do.</p>
+<h3>Making a long class longer</h3>
+<h4>Fee: $5.00</h4>
+<p>Follow the Boy Scout rule: gay people should be ostracized. No, wait, the other one: strive to leave any code you touch better than you found it. When you happen to work with a long class, take at least one small step to shrinking it.</p>
+<h3>Use of magic numbers</h3>
+<h4>Fee: $7.00</h4>
+<p>You're allowed to use two numbers in code: 0 and 1. Any others should be represented by a named constant.</p>
+<h3>Use of `||` or `&&` in a conditional</h3>
+<h4>Fee: $7.00</h4>
+<p>When you see `if foo && bar`, extract a method to explain what `foo && bar` really means.</p>
+<h3>Use of case or switch statement</h3>
+<h4>Fee: $15</h4>
+<p>It's hard to make a switch statement that does only one thing. They also tend to spread to other classes once created.</p>
+<h3>Passing a boolean parameter</h3>
+<h4>Fee: $15</h4>
+<p>Choosing a code path based on a boolean param is called control coupling, an unnecessarily high form of <a href="http://robots.thoughtbot.com/post/23112388518/types-of-coupling">coupling</a>.</p>
+<h3>Class name ending in Manager</h3>
+<h4>Fee: $30</h4>
+<p>"Manager" is a weasel word, conveying nothing. The more you want to call something a Manager, the more likely it is that your class has too many responsibilities.</p>
+<h3>Excessive fixture creation</h3>
+<h4>Fee: $10/object created</h4>
+<p>Build the minimal fixture you need to excute your test. Avoid the database if at all possible by using doubles or unsaved instances.</p>
+<h3>Stubbing the system under test</h3>
+<h4>Fee: $10/stubbed method</h4>
+<p>If you are testing the Foo class, you may not stub any methods on Foo. The more you want to, the more likely it is that you need to extract that behavior from Foo.</p>
+<h3>Verifying integration tests via database access</h3>
+<h4>Fee: $20</h4>
+<p>Integration tests should verify through the UI. Don't go peeking in the database.</p>
+<h3>Comments</h3>
+<h4>Fee: $200/line</h4>
+<p>One time in a thousand, a comment is warranted. Every other time you should improve the code until it doesn't need comments.</p>
+<h3>Comments containing TODO or FIXME</h3>
+<h4>Fee: $500/line</h4>
+<p>I like the occasional TODO comment in my branch, but I never merge them in. FIXME is a "fuck you" to your coworkers.</p>
+<h3>Careless naming</h3>
+<h4>Fee: $50/"wtf" from code reviewer</h4>
+<p>Try really, really, really hard to name things well. Update and improve your names constantly as the system changes. Be eager to rename something if you've found a better choice.</p>
+<h3>Static or class methods</h3>
+<h4>Fee: $50/each</h4>
+<p>Class methods <a href="http://blog.codeclimate.com/blog/2012/11/14/why-ruby-class-methods-resist-refactoring/">resist refactoring</a>, and often are used to <a href="http://stackoverflow.com/a/752805">mutate global state</a>. Refactor them away whenever possible.</p>
+<h3>Unnecessary mutation</h3>
+<h4>Fee: $100/attribute changed</h4>
+<p>Rather than mutating an existing record, can you create a new one and return that? Rather than delete something, can you record that a delete was requested? Rich Hickey <a href="http://www.infoq.com/presentations/Simple-Made-Easy">has some worthy thoughts on this</a>.</p>
+<h3>Class with multiple responsibilities</h3>
+<h4>Fee: $200/extra responsibility</h4>
+<p>Classes should have just one responsibility or reason to change. Almost no one errs on the side of making their classes too small, but I'd love to see it. Shoot for that; your classes will still probably be too big.</p>
+<h3>Duplication in production code</h3>
+<h4>Fee: $500</h4>
+<p>There are virtually no rules in programming that should always be followed, but avoiding duplication comes pretty close. Duplication makes code hard to change, which is the worst quality code can have.</p>
+<h3>Duplication in test code</h3>
+<h4>Fee: $500</h4>
+<p>Programmers who would never ship major duplication in production code happily copy and paste all over their test files. Test code is not subordinate to production code; its quality is equally important. Perhaps even more so: maintaining a brittle test suite will bleed your enthusiasm dry.</p>
+<h3>Untested code</h3>
+<h4>Fee: $1,000/line</h4>
+<p>Untested code is legacy code the instant its born. It's unprofessional to write it.</p>
+<aside>Thanks to Paul Graham's "On Lisp" for the original idea of taxing the use of certain functions.</aside>

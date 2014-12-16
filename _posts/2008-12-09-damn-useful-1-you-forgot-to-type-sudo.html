@@ -1,0 +1,32 @@
+---
+layout: post
+title: 'Damn Useful: When You Forget to type Sudo'
+date: 2008-12-09 09:12:20.000000000 -05:00
+categories:
+- coding
+tags: []
+status: publish
+type: post
+published: true
+meta:
+  dsq_thread_id: '172066463'
+author:
+  login: r00k
+  email: ben.orenstein@gmail.com
+  display_name: Ben Orenstein
+  first_name: ''
+  last_name: ''
+---
+<p><img src="assets/sandwich.png" width="360" align="middle" height="299" hspace="105" /></p>
+<h2>(This post is part of a series.  To read more tips and to learn about the philosophy behind these posts, check out the <a href="http://codeulate.com/?p=21">parent post</a>.)</h2>
+<p>You know you've done this way too many times:</p>
+<p>ben@lispclub ~ $<strong> apt-get install blahblahblah<br />
+</strong>E: Could not open lock file /var/lib/dpkg/lock - open (13 Permission denied)<br />
+E: Unable to lock the administration directory (/var/lib/dpkg/), are you root?</p>
+<p>Bah.</p>
+<h2><strong>You forgot to type sudo first</strong>.</h2>
+<p>So what do you do?  Hit up arrow, swing back to the beginning of the line, type sudo--ARGGH...THE WASTED SECONDS!</p>
+<h2><strong>Do this instead: </strong><strong>sudo !!</strong></h2>
+<p>In bash, !! means "repeat the last command I entered."  Bash substitutes your apt-get command after the sudo, and you finally get to install blahblahblah 0.0.13.  Note that this isn't specific to sudo.  If you do an ls, and then wish you'd grepped the results for foo, type !! | grep foo.</p>
+<h2><strong>How to remember it: </strong></h2>
+<p>Imagine an angry father yelling for his son.  "Sudo!!"  Sudo runs down from his room, sees the command  he was supposed to be in front of, and executes it immediately.</p>

@@ -1,0 +1,43 @@
+---
+layout: post
+title: Making OpenID Usable
+date: 2009-09-12 13:05:57.000000000 -04:00
+categories:
+- general
+tags: []
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+author:
+  login: r00k
+  email: ben.orenstein@gmail.com
+  display_name: Ben Orenstein
+  first_name: ''
+  last_name: ''
+---
+<p>During the <a href="http://r09.railsrumble.com/">Rails Rumble '09</a>, <a href="http://openid.net/">OpenID </a>came up a lot in the #railsrumble IRC<br />
+channel.  A lot people had implemented OpenID in their app, and there was<br />
+some surprising grumbling from judges who didn't like it.</p>
+<p>The grumbling surprised me at first: I like OpenID.  But I think I've figured<br />
+out why these judges didn't: it's easy to do a crappy login page.</p>
+<p>Here's an example of a really unfriendly OpenID login page:<br />
+<a href="http://www.livejournal.com/openid/"><img class="alignnone" title="LJ OpenID" src="assets/lj_open_id.png" alt="" width="477" height="64" /></a></p>
+<p>Yikes.</p>
+<p>That blank white text box is like an iron door between me and this site.  I am a<br />
+nerd AND an OpenID proponent, but I do not have my provider's URL memorized.<br />
+Even if I did, it's a drag to type: "https://www.google.com/accounts/o8/id"</p>
+<p>(Incidentally, Googlers: can we get https://openid.google.com for this?  C'mon,<br />
+that's kinda cool, no?)</p>
+<p>So, please don't ever make me go look up my OpenID provider URL.  Particularly<br />
+if I'm using someone as large as Google for a provider.</p>
+<p>Okay, cleanse your palatte and let's check out an example of an EXCELLENT OpenID login page:<br />
+<a href="http://stackoverflow.com/users/login"><img class="alignnone" title="SO OpenID" src="assets/so_open_id.png" alt="" width="554" height="265" /></a></p>
+<p>Kudos to you, SO team.  This page kicks ass.</p>
+<p>Stack Overflow gives me exactly what I want on an OpenID login page: a huge button with Google's logo on it.<br />
+Not only that, but they've shrunk the buttons for the less popular providers. I love that sort of touch in software.</p>
+<p>If you're going to support OpenID, please read the organization's <a href="http://wiki.openid.net/Details-of-UX-Best-Practices-for-RPs">Best UX<br />
+Practices</a>.  Or maybe <a href="http://developer.yahoo.com/openid/bestpractices.html">Yahoo's OpenID Usability Research</a>.</p>
+<p>Then just go copy StackOverflow's page.</p>
+<p>I think we should shoot to have all OpenID login pages look like siblings: possessing a thread of sameness despite their differences.</p>

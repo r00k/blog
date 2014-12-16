@@ -1,0 +1,55 @@
+---
+layout: post
+title: Simple Rules for New Programmers
+date: 2013-08-21 21:04:41.000000000 -04:00
+categories:
+- general
+tags: []
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+author:
+  login: r00k
+  email: ben.orenstein@gmail.com
+  display_name: Ben Orenstein
+  first_name: ''
+  last_name: ''
+---
+<h3>Introduction</h3>
+<p>Hello, and welcome to the programming community! It's great to have you.</p>
+<p>I'd like to offer a few tips that will help you avoid the mistakes made by most new programmers. Following my advice will cause you to do the right thing about 85% of the time, which is a great percentage when you're getting started. As you gain experience, you'll learn to spot the other 15%.</p>
+<h3>The rules</h3>
+<p><strong>Short methods are vastly superior to long methods.</strong> </p>
+<p>The ideal method is one line long and takes no arguments. It is an instance method.</p>
+<p>Methods that are longer than one line are not as good. Methods that take parameters are not as good. Class methods are also not as good.</p>
+<p>During development, it's fine to add lines to an existing method and bloat it up. Once your code is working, begin extracting one- and two-line methods until everything is svelte again.</p>
+<p>As a beginner, your tendency will be to create methods that are too large. Make yours "too small" for a while instead. Pay attention to how it feels to work with them.</p>
+<p>Consider an 8-line method to be large, and a 24-line method to be enormous.</p>
+<p><strong>Short classes are vastly superior to long classes.</strong></p>
+<p>Just as your classes should contain tiny methods, so should your system be built of tiny classes.</p>
+<p>Just like methods, you will tend to write classes that are too large. They will do too many things. For now, try to overcompensate in the other direction.</p>
+<p>During development, it's fine to add methods to an existing class and bloat it up. Once your code works, look for a cohesive set of methods to extract into a new, smaller class.</p>
+<p><strong>Code that is easy to change is better than code that is not.</strong></p>
+<p>The hard part of programming comes when you've got everything working correctly but now you want it to work <em>differently</em>. </p>
+<p>The best time to evaluate some code you've written is when you're trying to change it three months later. If changing it is easy, congratulations! Celebrate your victory. If not, try to figure out what's making it hard to change. Then, use refactorings to make your upcoming change easier.</p>
+<p><strong>Duplication is the reason that most code is hard to change.</strong> </p>
+<p>When a codebase has no duplication, changes tend to be localized; only a small portion of your system needs altering. This is ideal because changes that can be made in just one class are easier than those that require changes to many.</p>
+<p>Imagine your state's Senate passes a law that all SaaS companies must now charge sales tax on their subscription fees. If your system has exactly one class that is responsible for calculating these fees, your change will be simple. If the logic for calculating fees is duplicated even once, it becomes more difficult. Imagine you've copied `total_subscription_fee = monthly_subscription_price - discounts` into three different places. You must track down and change all three. This is not ideal.</p>
+<p><strong>Code written via TDD is vastly superior to code that is not.</strong></p>
+<p>While you're new, don't worry about testing at all.</p>
+<p>Once you've got your footing, make it a priority to learn the practice of test-driven development (TDD).</p>
+<p>Then, once you understand the mechanics of TDD, do it all the time. When it feels hard and unnatural, important learning is taking place. Redouble your efforts.</p>
+<p>Practicing TDD will have more impact on the quality of your code than any other habit.</p>
+<p><strong>It's extremely important to name everything in your system well.</strong></p>
+<p>You should exert significant effort in making sure every variable, method, class, module, file, and repository has an excellent name.</p>
+<p>You are likely at first to choose names that are too short. Don't be afraid of longer, more descriptive names.</p>
+<p>If a name becomes slightly inaccurate due to code changes, rename it eagerly.</p>
+<p>Be consistent: always name the same concept the same way in all parts of your system. If you discover an inconsistency, fix it eagerly.</p>
+<h3>Be warned</h3>
+<p>Some fraction of experienced programmers will disagree violently with my recommendations. </p>
+<p>This is mostly because most programmers are extremely detail-oriented. The omission of subtleties enrages this group more severely than the general public. These rules are simple because they are for beginners, but that will not assuage some portion of people. They will be angry that these rules are sometimes wrong.</p>
+<p>Other programmers will object to these rules on different grounds. For example, some will say that creating too many methods is equally bad as having large methods. I believe these people are wrong. But even if they weren't, beginners so consistenly create methods that are too long that they need not worry about the other extreme.</p>
+<h3>Want to learn more?</h3>
+<p>You can see me discuss all these topics, refactor code to follow the guidelines, and explain my TDD workflow in <a href="https://peepcode.com/products/play-by-play-benorenstein">this 96-minute Peepcode screencast</a>. </p>
