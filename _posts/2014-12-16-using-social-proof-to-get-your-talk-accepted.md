@@ -29,6 +29,6 @@ speaking at a competitive conference:
 4. Present to your local meetup.
 5. Ask the audience for honest feedback _and_ to tweet if they liked it.
 6. Save the tweets. Apply the feedback.
-7. Apply to your dream conference.
+7. Apply to your dream conference. Include the tweets.
 8. Get accepted. Prepare to crush it. [Email me](mailto:
 ben.orenstein@gmail.com) if you're freaking out.
