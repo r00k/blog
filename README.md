@@ -1,5 +1,4 @@
-This is my blog. There are many like it, but this one is mine.
+A blog by Ben Orenstein.
 
-Yep.
-
-
+- New post: `rake new`.
+- Test locally: `jekyll serve` (alias: `js`).
