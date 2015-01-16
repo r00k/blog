@@ -219,7 +219,9 @@
     }
 
     h3 {
-        font-size: 26px;
+        font-size: $base-font-size * 1.4;
+        line-height: $base-font-size * 1.8;
+        margin-bottom: $base-font-size * 1.3;
 
         @include media-query($on-laptop) {
             font-size: 22px;
