@@ -13,7 +13,7 @@ just 30 minutes, and you'll be fairly proficient after only a week. After just
 three weeks, most people are significantly faster than they were in their old
 editor. Don't put off learning this awesome tool any longer.
 
-Here are a few tips that will ensure that your attempt is succesful:
+Here are a few tips that will ensure that your attempt is successful:
 
 ### Begin with vimtutor.
 
@@ -34,7 +34,7 @@ first week, you're going to pretend you're one of them. If you're writing text
 of any kind, do it in vim.
 
 The first hundred vim commands you execute will be your most painful, so get
-through them as quickly as possible. Don't leave vim except in for major
+through them as quickly as possible. Don't leave vim except in major
 emergencies.
 
 ### Find an easily-accessible friend who can answer questions.
@@ -53,7 +53,7 @@ out.
 You'll want two of these, actually. The first should be a comprehensive list of
 what all the keys do, [this one is
 fantastic](http://www.viemu.com/a_vi_vim_graphical_cheat_sheet_tutorial.html).
-For your second sheet, write down the 5 plus-or-minus 2 commmands you're
+For your second sheet, write down the 5 plus-or-minus 2 commands you're
 specifically trying to memorize right now. Print these out and have them within
 grabbing distance.
 
@@ -63,4 +63,3 @@ This is not beyond you. Things like weaning an arrow key addiction is brutally
 hard at first, but becomes completely automatic very quickly. Thousands of
 people have gotten blazing fast with this editor, and you can join them if you
 like. It's worth it; I promise.
-
