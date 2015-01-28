@@ -35,9 +35,12 @@ class Account < ActiveRecord::Base
 end
 {% endhighlight %}
 
-<p>The with_options method is a really cool chunk of code that lets you DRY up
+The `with_options` method is a really cool chunk of code that lets you DRY up
 duplication that sometimes appear when passing the same options to a series of
-methods.</p> <p>But the point of this post is <strong>how it works behind the
-scenes</strong>, so check out this 11-minute code walkthrough:</p> <p><iframe
-width="740" height="375" src="http://www.youtube.com/embed/OBOl9fFuILk?hd=1"
-allowfullscreen></iframe></p> 
+methods.
+
+Curious <strong>how it works behind the scenes</strong>? Check out this
+11-minute code walkthrough:
+
+<iframe width="740" height="375"
+  src="http://www.youtube.com/embed/OBOl9fFuILk?hd=1" allowfullscreen></iframe>
