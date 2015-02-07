@@ -32,7 +32,7 @@ edited lightly) that I don't think has been bested since:
 > physics and noise and approximation, **the constraints imposed in building
 > large software systems are the limitations of our own minds.**
 
-It's even better to hear him say it:
+It's even better when Hal says it:
 
 <iframe width="749" height="480"
 src="https://www.youtube.com/embed/2Op3QLzMgSY?start=534" frameborder="0"
