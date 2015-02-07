@@ -9,3 +9,8 @@ p {
 h1.post-title {
   line-height: 58px;
 }
+
+/* For youtube embeds on mobile */
+iframe {
+  max-width:100%;
+}
