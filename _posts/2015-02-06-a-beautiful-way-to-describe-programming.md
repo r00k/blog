@@ -32,6 +32,10 @@ edited lightly) that I don't think has been bested since:
 > physics and noise and approximation, **the constraints imposed in building
 > large software systems are the limitations of our own minds.**
 
+> So in that sense, computer science is like an abstract form of engineering.
+> It's the kind of engineering where you ignore the constraints that are imposed
+> by reality.
+
 It's even better when Hal says it:
 
 <iframe width="749" height="480"
