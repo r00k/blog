@@ -3,9 +3,8 @@ title: A Beautiful Way to Describe Programming
 layout: post
 ---
 
-In July of 1986, Hal Abelson and Jay Sussman gave a series of lectures.
-
-The topic was [The Structure and Interpretation of Computer Programs][lectures].
+In July of 1986, Hal Abelson and Jay Sussman gave a series of lectures. The
+topic was [The Structure and Interpretation of Computer Programs][lectures].
 
 In the first lecture, Abelson gives a description of programming (which I've
 edited lightly) that I don't think has been bested since:
