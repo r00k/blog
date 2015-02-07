@@ -35,7 +35,7 @@ edited lightly) that I don't think has been bested since:
 It's even better to hear him say it:
 
 <iframe width="749" height="480"
-src="https://www.youtube.com/embed/2Op3QLzMgSY?start=526" frameborder="0"
+src="https://www.youtube.com/embed/2Op3QLzMgSY?start=534" frameborder="0"
 allowfullscreen></iframe>
 
 [lectures]: http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-001-structure-and-interpretation-of-computer-programs-spring-2005/video-lectures/
