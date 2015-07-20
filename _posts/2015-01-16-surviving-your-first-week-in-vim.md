@@ -43,7 +43,7 @@ The second-hardest part of your first week in vim will be the dozens of
 questions that will pop into your head as you use the editor. The ideal way to
 handle this is a quickly-accessible guru who can answer your queries. Ideally
 this person sits next to you. Next best is if they're available through a
-low-latency protocol like Campfire or irc. If you don't have a suitable friend,
+low-latency protocol like Slack or IRC. If you don't have a suitable friend,
 you can fall back to Stack Overflow or check out #vim on freenode. If all that
 fails, [give me a shout on twitter](http://twitter.com/r00k) and I'll help you
 out.
