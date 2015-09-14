@@ -11,15 +11,21 @@ type: post
 published: true
 ---
 <p>Today I learned that you can pass a block to Class.new, like so:</p>
-<p><code lang="ruby"><br />
-klass = Class.new do<br />
-  def self.speak<br />
-    "hi!"<br />
-  end<br />
-end</p>
-<p>>> klass.speak<br />
-=> "hi!<br />
-</code></p>
+<p>
+  <code lang="ruby"><br />
+    <p>
+      klass = Class.new do<br />
+        def self.speak<br />
+          "hi!"<br />
+        end<br />
+      end<br />
+    <p/>
+    <p>
+      >> klass.speak<br />
+      => "hi!<br />
+    </p>
+  </code>
+</p>
 <p>This is a handy for creating one-off classes; the kind you'll throw away quickly. </p>
 <p>It's likely that you'd do this during tests. Here's a test in active_support that uses this technique:</p>
 <p><code lang="ruby"><br />
