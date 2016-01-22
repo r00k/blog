@@ -3,7 +3,9 @@ title: Compared to What
 layout: post
 ---
 
-A few years ago, I took a class in American Sign Language (ASL). In that class I learned a wonderful new concept: [indexing](http://www.lifeprint.com/asl101/pages-layout/indexing.htm).
+## A different kind of index
+
+A few years ago, I took a class in American Sign Language (ASL). In that class I learned an awesome new concept: [indexing](http://www.lifeprint.com/asl101/pages-layout/indexing.htm).
 
 Let's say you and I were signing and I wanted to tell you about my new friend John.
 
@@ -11,7 +13,7 @@ If John were in the room, I'd just point to him when I wanted to refer to him. B
 
 Since this is the first time John has come up in conversation, I'd start by fingerspelling J-o-h-n, so you'd know his name. 
 
-Immediately after spelling his name, I'd point to somewhere in front of me, usually off to my right. That point would then represent John for the rest of our conversation. If either of us wanted to refer to John, we'd simply point there.
+Just after spelling his name, I'd point to somewhere in front of me, usually off to my right. That point would then represent John for the rest of our conversation. If either of us wanted to refer to John, we'd simply point there.
 
 If I then brought up a second person, Mary, I'd point somewhere off to my left, indexing her there.
 
@@ -19,11 +21,13 @@ We could then refer to John or Mary without respelling their names, simply by po
 
 The places in space that Mary and John "occupy" are known as referrants, and the whole concept is known as indexing. In ASL, this idea replaces pronouns like "he", "she", and "it".
 
-When I first learned this concept, it tickled my brain in such a delightful way. I loved discovering that language could vary in a dimension I'd never even considered.
+When I first learned this concept, it really tickled my brain. I loved discovering that language could vary in a dimension I'd never even considered.
+
+## Building a plane
 
 For the first part of my life, language had been a single point. I knew English, and nothing else. Everything I knew about language was things that were true about English.
 
-I learned Spanish next, and became aware that some languages use different verb endings depending on how well you know the person you're speaking to. 
+I learned Spanish next, and discovered that some languages give every noun a gender. Madness!
 
 My single point of knowledge had expanded into a line. On one side, English was like this. On the other, Spanish was like that.
 
@@ -31,7 +35,7 @@ Adding ASL gave me a third point. And suddenly, a plane.
 
 Indexing showed me yet another way that languages could be different from each other. There was a whole new axis to consider, and it changed how I saw both English and Spanish.
 
-## To the newer programmers
+## What does this mean for you?
 
 In 2014, 6,000 students graduated from coding bootcamps.
 
