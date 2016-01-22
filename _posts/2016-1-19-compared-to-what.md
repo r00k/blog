@@ -45,20 +45,22 @@ I wouldn't be surprised to see this number double this year, and again the year 
 
 I believe we are about to experience a "baby boom" of programmers. New developers will enter the industry dramatically faster than old ones exit it, and the average amount of experience will steadily decline. 
 
-To these newer programmers I say welcome! We're glad to have you. There's much to be built, and we need your help.
+(Don't worry, it'll all be fine.)
 
-But please also know this: to know only one language as a programmer is an unfortunate thing. 
+To these newer programmers, I say welcome! We're glad to have you. We've got a lot to do and need your help.
+
+There's something you should know, though: if you only know one programming language, you should try to change that soon.
 
 (By the way, Ruby, Python, and JavaScript are all so similar as to count as one language.)
 
 Like me with English, you're likely to think the way your language works is simply how programming is done, without strengths or weaknesses. Your knowledge will form a single point, and you'll lack axes on which to evaluate your code.
 
-For your first years in the industry, it's fine to focus on a single language. At first, writing working programs is challenge enough, so don't divide your efforts.
+If you're super new, don't worry about that. Breaking into the software industry is tough enough without dividing your efforts over multiple languages. But once you get your feet under you, I encourage you branch out. Learn a few languages that are unlike those you already know.
 
-But once you get your feet under you, I encourage you branch out. Learn a few new languages that are quite unlike those you already know.
+Many of you will begin with Ruby, Python, or JavaScript. If that's you, consider learning Clojure, to teach you can happen when your code is made of data. 
 
-Many of you will begin with Ruby, Python, or JavaScript. If so, consider next learning Clojure, to teach you can happen when your code is made of data. 
-
-Then, perhaps Haskell, to explore what would happen if you took functional programming to its purest extreme.
+Then, perhaps Haskell, to experience functional programming at its purest.
 
 Build things in these languages, but also deploy them. Ideally, build something in them that other people would miss if it went away. Toy projects are a good start, but you learn a different set of things about a language when you support it over time.
+
+And then, of course, teach what you've learned.
