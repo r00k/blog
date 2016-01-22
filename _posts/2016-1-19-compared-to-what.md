@@ -63,4 +63,6 @@ Then, perhaps Haskell, to experience functional programming at its purest.
 
 Build things in these languages, but also deploy them. Ideally, build something that other people would miss if it went away. Toy projects are a good start, but you learn a different set of things about a language when you support it over time.
 
-And then, of course, teach those newer than you what you've learned.
+If you're up for it, teach others what you've learned and discover how much better you understand something once you teach it.
+
+Finally, appreciate the nuance you can bring to programming language discussions. Think in strengths, weaknesses, and axes.
