@@ -3,11 +3,7 @@ title: Compared to What
 layout: post
 ---
 
-## Building a plane
-
-A few years ago, I took a class in American Sign Language (ASL).
-
-In that class I learned a wonderful new concept: [indexing](http://www.lifeprint.com/asl101/pages-layout/indexing.htm).
+A few years ago, I took a class in American Sign Language (ASL). In that class I learned a wonderful new concept: [indexing](http://www.lifeprint.com/asl101/pages-layout/indexing.htm).
 
 Let's say you and I were signing and I wanted to tell you about my new friend John.
 
@@ -35,7 +31,7 @@ Adding ASL gave me a third point. And suddenly, a plane.
 
 Indexing showed me yet another way that languages could be different from each other. There was a whole new axis to consider, and it changed how I saw both English and Spanish.
 
-## To programming
+## To the newer programmers
 
 In 2014, 6,000 students graduated from coding bootcamps.
 
