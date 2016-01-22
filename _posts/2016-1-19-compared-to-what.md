@@ -61,6 +61,6 @@ Many of you will begin with Ruby, Python, or JavaScript. If that's you, consider
 
 Then, perhaps Haskell, to experience functional programming at its purest.
 
-Build things in these languages, but also deploy them. Ideally, build something in them that other people would miss if it went away. Toy projects are a good start, but you learn a different set of things about a language when you support it over time.
+Build things in these languages, but also deploy them. Ideally, build something that other people would miss if it went away. Toy projects are a good start, but you learn a different set of things about a language when you support it over time.
 
-And then, of course, teach what you've learned.
+And then, of course, teach those newer than you what you've learned.
