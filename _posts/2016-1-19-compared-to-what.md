@@ -1,6 +1,7 @@
 ---
 title: Compared to What
 layout: post
+published: false
 ---
 
 ## A different kind of index
