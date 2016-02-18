@@ -11,8 +11,8 @@ I was much happier working in Ruby, but ignoring JavaScript gave me some doubts.
 
 This simultaneous worry and disinterest persisted.
 
-And then, ClojureScript. And now, Elm.
+And then ClojureScript happened. And now Elm.
 
 I don't think I'll ever need to write any JavaScript. Not by hand, at least.
 
-Turns out I didn't miss _the_ boat. I missed _a_ boat. And I couldn't be happier.
+Turns out I didn't miss _the_ boat, just _a_ boat. I couldn't be happier about it.
