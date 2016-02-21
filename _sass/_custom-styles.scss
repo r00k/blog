@@ -60,3 +60,35 @@ small, .font_small {font-size: 0.707em;}
 .post-link {
   font-family: 'Libre Baskerville', serif;
 }
+
+.drip {
+  font-size: 16px;
+  margin-bottom: 30px;
+
+  input {
+    margin-bottom: 20px;
+    font-size: 16px;
+    padding-top: 0.5em;
+    padding-right: 0.5em;
+    padding-left: 0.5em;
+    padding-bottom: 0.5em;
+    border: 1px solid #DDD;
+    border-radius: 3px;
+    width: 40%;
+  }
+
+  input[type='submit'] {
+    background-color: lighten(#477DCA, 10%);
+    color: #fff;
+    border: none;
+    font-size: 16px;
+    border-radius: 3px;
+    line-height: 1;
+    padding-top: 0.75em;
+    padding-bottom: 0.75em;
+    padding-right: 1em;
+    padding-left: 1em;
+    cursor: pointer;
+    width: 43%;
+  }
+}
