@@ -1,6 +1,7 @@
 ---
 title: Dance Class Onboarding
 layout: post
+published: false
 ---
 
 How my local dance studio onboards new students:
