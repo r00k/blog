@@ -16,6 +16,7 @@ How my local dance studio onboards new students:
 - Polaroid with your name/face
 - Consistent coach
 - They suggest additional activities, like the social party thing
-
 - Lesson -> Group Class -> Party
 - Hand-in-hand linked walk to party(!!!)
+- homework
+- file with notes on me
