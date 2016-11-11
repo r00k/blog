@@ -1,5 +1,5 @@
 ---
-title: An Email Exchange I Had This Week
+title: A Recent Email Exchange
 layout: post
 ---
 
