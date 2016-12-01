@@ -13,6 +13,6 @@ This simultaneous worry and disinterest persisted.
 
 And then ClojureScript happened. And now Elm.
 
-I don't think I'll ever need to write any JavaScript. Not by hand, at least.
+I don't think I'll ever need to write much JavaScript. Not by hand, at least.
 
 Turns out I didn't miss _the_ boat, just _a_ boat. I couldn't be happier about it.
