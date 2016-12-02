@@ -73,7 +73,7 @@ Clearing the inbox feels amazing, by the way.
 
 > Review all projects in Review tab
 
-I check in on each of my project periodically to make sure a) I'm still going to do it, and b) it has a clear next action.
+I check in on each of my projects periodically to make sure a) I'm still going to do it, and b) it has a clear next action.
 
 > Switch to Work Hot perspective
 
@@ -81,7 +81,7 @@ This is a customized view in OmniFocus which shows me only work tasks that have 
 
 > Pick one and start working!
 
-This one's kinda important.
+This one's kind of important.
 
 ## Why do I use a checklist?
 
