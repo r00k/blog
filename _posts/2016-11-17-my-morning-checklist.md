@@ -1,5 +1,5 @@
 ---
-title: My Morning Checklist
+title: The Checklist I Use To Start My Day
 layout: post
 ---
 
