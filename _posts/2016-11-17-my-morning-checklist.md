@@ -45,7 +45,7 @@ Next, I process that inbox and review my current projects.
 
 Then, I get to work.
 
-### Some thoughts on individual items:
+## Some thoughts on individual items:
 
 > [ ] Process personal email inbox (remember 2-minute rule)
 
@@ -85,7 +85,7 @@ This is a customized view in OmniFocus which shows me only work tasks that have 
 
 This one's kinda important.
 
-### Why do I use a checklist?
+## Why do I use a checklist?
 
 - It minimizes the number of choices I have to make at the start of my day. I find this lowers the barrier to getting my work started.
 - If I want to build a new daily habit, I can just add it to the checklist! Since I've already built the habit to use my checklist, I can chain new behaviors on that habit for free. I stole this great idea from [BJ Fogg](http://tinyhabits.com/).
