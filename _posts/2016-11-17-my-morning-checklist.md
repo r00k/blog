@@ -45,17 +45,17 @@ Then, I get to work.
 
 ## Some thoughts on individual items:
 
-> [ ] Process personal email inbox (remember 2-minute rule)
+> Process personal email inbox (remember 2-minute rule)
 
 I process my personal email first so I can get it off my mind. I work better when my personal life is in order. [Efficiency starts with a haircut](http://giantrobots.fm/208).
 
 "Remember 2-minute rule" means any email I can deal with in under two minutes gets tackled immediately. This idea (and others that shape my checklist) are from the excellent [Getting Things Done](http://amzn.to/2f9zvqF).
 
-If an email would require me to do something that will take more than 2 minutes, I forward it to a special address that creates an item for it in my OmniFocus inbox. I do this even if I'm not sure I'll do the thing the email represents.
+If an email seems like it might require me to do something that will take more than 2 minutes, I forward it to a special address that creates an item for it in my OmniFocus inbox. I do this even if I'm not sure I'll do the thing the email represents.
 
 I then archive the email. I don't like to leave emails around to represent todos. Todos go in OmniFocus, the sole source of what-I'm-going-to-do truth.
 
-> [ ] Process OmniFocus inbox
+> Process OmniFocus inbox
 
 One of my favorite OmniFocus features is its inbox.
 
@@ -71,15 +71,15 @@ For each item, I do one of three things:
 
 Clearing the inbox feels amazing, by the way.
 
-> [ ] Review all projects in Review tab
+> Review all projects in Review tab
 
 I check in on each of my project periodically to make sure a) I'm still going to do it, and b) it has a clear next action.
 
-> [ ] Switch to Work Hot perspective
+> Switch to Work Hot perspective
 
 This is a customized view in OmniFocus which shows me only work tasks that have been flagged. I flag things when I want to tackle them in the next day or two.
 
-> [ ] Pick one and start working!
+> Pick one and start working!
 
 This one's kinda important.
 
