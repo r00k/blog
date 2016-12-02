@@ -61,13 +61,13 @@ One of my favorite OmniFocus features is its inbox.
 
 The inbox is a holding area for things that I want to consider doing. I dump items into it using OmniFocus' macOS or iOS app, by telling Alexa, or by forwarding emails to a special address. 
 
-After I've swept everything that might need attention into that inbox, I process it. I explicitly remind myself to process from top to bottom because it's tempting to go into cherry-picking mode. It's faster to just be robotic about it and process in order.
+After I've swept everything that might need attention into that inbox, I process it. I explicitly remind myself to process from top to bottom because it's tempting to go into cherry-picking mode. It's faster to just be robotic about it and work in order.
 
 For each item, I do one of three things:
 
 1. Delete it. Turns out I'm not going to do that!
 2. Turn it into a single action: "Buy new Nalgene".
-3. Promote it into a multi-step project: "Go skiing with friends". Immediately come up with a first action for that project: "Send out [Doodle](http://doodle.com/) to find available dates".
+3. Promote it into a multi-step project: "Go skiing with friends". When I do this, I immediately come up with a first action for that project: "Send out [Doodle](http://doodle.com/) to find available dates".
 
 Clearing the inbox feels amazing, by the way.
 
