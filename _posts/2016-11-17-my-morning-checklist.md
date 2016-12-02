@@ -59,7 +59,7 @@ I then archive the email. I don't like to leave emails around to represent todos
 
 One of my favorite OmniFocus features is its inbox.
 
-The inbox is a holding area for things that I want to consider doing. I dump items into it using OmniFocus' macOS or iOS app, by telling Alexa, or by forwarding emails to a special address. 
+The inbox is a holding area for things that I want to consider doing. I dump items into it using OmniFocus' macOS or iOS app, by [telling Alexa](https://ifttt.com/applets/286082p-send-amazon-echo-todos-to-omnifocus), or by forwarding emails to a special address. 
 
 After I've swept everything that might need attention into that inbox, I process it. I explicitly remind myself to process from top to bottom because it's tempting to go into cherry-picking mode. It's faster to just be robotic about it and work in order.
 
