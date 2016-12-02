@@ -32,8 +32,6 @@ Process
 Start
 -----
 
-[ ] Open production console
-[ ] Clear support queue (top to bottom)
 [ ] Switch to Work Hot perspective
 [ ] If no items in Work Hot, go flag some things
 [ ] Pick one and start working!
