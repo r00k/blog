@@ -37,7 +37,7 @@ Start
 [ ] Pick one and start working!
 ```
 
-First, I sweep: I turn everything that might require action into an item in my todo software's inbox (I use OmniFocus).
+First, I sweep: I turn everything that might require action into an item in my todo software's inbox (I use [OmniFocus](https://www.omnigroup.com/omnifocus)).
 
 Next, I process that inbox and review my current projects.
 
