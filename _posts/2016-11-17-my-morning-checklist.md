@@ -5,7 +5,7 @@ layout: post
 
 I don't always start my day with a checklist, but the days where I do seem to go better.
 
-To access my checklist, I run a shell alias I made called `start` which opens it opens it in Vim.
+To access my checklist, I run a shell alias I made called `start` which opens it in Vim.
 
 Here's what it looks like:
 
