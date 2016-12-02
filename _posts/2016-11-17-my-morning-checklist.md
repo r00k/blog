@@ -87,4 +87,4 @@ This one's kind of important.
 
 - It minimizes the number of choices I have to make at the start of my day. I find this lowers the barrier to getting my work started.
 - If I want to build a new daily habit, I can just add it to the checklist! Since I've already built the habit to use my checklist, I can chain new behaviors on that habit for free. I stole this great idea from [BJ Fogg](http://tinyhabits.com/).
-- It leaves me confident that I've swept, processed, and reviewed anything that needs it. It lets me start my day with a clear head and a confidence about what I should do first.
+- It leaves me confident that I've swept, processed, and reviewed all my stuff. I start the day with a clear head and a confidence about what to do first.
