@@ -9,4 +9,7 @@
   No open browser tabs
   No "unread" emails in inbox
    
-  
+- Stupid things that trick me into working
+  Getting blood drawn riddle
+  Pomos
+  Switching todo systems
