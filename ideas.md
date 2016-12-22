@@ -13,3 +13,8 @@
   Getting blood drawn riddle
   Pomos
   Switching todo systems
+
+- How to respond to a compliment
+  Don't disagree
+  Don't repeat it back
+
