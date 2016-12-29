@@ -14,7 +14,7 @@
   Pomos
   Switching todo systems
 
-- How to respond to a compliment
-  Don't disagree
+- How to respond to a compliment AND criticism are the same
+  Thank for the feedback
   Don't repeat it back
 
