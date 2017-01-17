@@ -18,3 +18,8 @@
   Thank for the feedback
   Don't repeat it back
 
+
+- Moderation and consistency
+  Works for your body
+  Works for your mind (GR podcast)
+
