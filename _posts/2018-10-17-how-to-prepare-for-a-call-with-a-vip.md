@@ -12,8 +12,8 @@ Include the following:
 
 Fifty good things happen when you do this, but here are top three:
 
-1. You demonstrate extreme respect for your VIP's time.
-2. You give them a good long time to consider your questions.
-3. You make a motherfucking impression.
+1. You demonstrate tremendous respect for your VIP's time.
+2. You give them a long time to consider your questions.
+3. You make a great impression.
 
-Bonus: they might just answer you via email. Boom&mdash;one less meeting.
+Bonus: they might just decide to answer you via email. Boom. One less meeting.
